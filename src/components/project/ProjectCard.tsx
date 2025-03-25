@@ -9,15 +9,18 @@ import Link from 'next/link'
 import { Favicon } from "favicon-stealer";
 
 export function ProjectCard({ project, titleAs }: { project: ProjectItemType, titleAs?: keyof JSX.IntrinsicElements }) {
-  const utmLink = `https://${project.link.href}?utm_source=${utm_source}`
   let Component = titleAs ?? 'h2'
   return (
     <li className='group relative flex flex-col items-start h-full'>
       <div className="relative flex flex-col justify-between h-full w-full p-4 rounded-2xl border border-muted-foreground/20 shadow-sm transition-all group-hover:scale-[1.03] group-hover:shadow-md group-hover:bg-muted/5">
         <div className=''>
           <div className='flex flex-col sm:flex-row justify-center sm:justify-start items-start sm:items-center gap-4'>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full">
-              <Favicon url={project.link.href} />
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-muted">
+              {project.link ? (
+                <Favicon url={project.link.href} />
+              ) : (
+                <HashIcon className="w-6 h-6 text-muted-foreground" />
+              )}
             </div>
             <Component className="text-base font-semibold">
               {project.name}
@@ -46,9 +49,7 @@ export function ProjectCard({ project, titleAs }: { project: ProjectItemType, ti
           )}
         </div>
         <Link
-          href={utmLink}
-          target='_blank'
-          rel='noopener noreferrer'
+          href={`/projects/${project.id}`}
           className='absolute inset-0 z-20'>
           <ArrowUpRight size={32} weight="duotone" className="absolute top-4 right-4 h-4 w-4 group-hover:text-primary group-hover:cursor-pointer" />
         </Link>

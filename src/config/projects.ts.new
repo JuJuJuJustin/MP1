@@ -1,0 +1,204 @@
+// Types
+export interface ProjectItemType {
+  id: string
+  name: string
+  description: string
+  fullDescription?: string
+  link?: { href: string; label: string }
+  tags: string[]
+  images?: string[]
+  features?: string[]
+  benefits?: string[]
+  drawbacks?: string[]
+  challenges?: string[]
+  workingExample?: string[]
+  keyFindings?: string[]
+  technologies?: string[]
+  researchAndMarket?: string[]
+  technicalArchitecture?: string[]
+  keyFeatures?: string[]
+  implementationAndUX?: string[]
+  futureEnhancements?: string[]
+}
+
+export interface ActivityItemType {
+  name: string
+  description: string
+  date: string
+  location: string
+  link?: string
+}
+
+// Awards - Temporarily Hidden
+/*
+export const awardsHeadLine = "Awards & Honors"
+export const awardsIntro = "Recognition for academic and professional achievements."
+
+export const awards: Array<ActivityItemType> = [
+  {
+    name: 'Outstanding Teacher Award',
+    description: '',
+    date: '2024',
+    location: 'SCLS, Shanghai',
+  },
+  {
+    name: 'Zhui Ying Award',
+    description: '',
+    date: '2023',
+    location: 'Qingpu, Shanghai',
+  },
+]
+*/
+
+// Research & Projects
+export const projectHeadLine = "Research & Projects"
+export const projectIntro = "Academic research and technical projects I've worked on."
+
+export const projects: Array<ProjectItemType> = [
+  {
+    id: 'capstone-project',
+    name: 'Personality Assessment Model Project',
+    description: 'Project Sponsor: Mariana Ferrari, Dooit (AI-driven talent management company)',
+    fullDescription: 'This proposal outlines the development of an AI-powered personality assessment tool designed to enhance HR decision-making. Traditional personality assessments are often time-consuming and subject to human bias. Our solution integrates advanced machine learning models with modern UI/UX principles to streamline the evaluation process. Over the past eight weeks, we have conducted extensive research, gathered user feedback, and implemented AI-driven text extraction and analysis using Florence-2, Optical Character Recognition (OCR), and the Deepseek API. The expected impact of this solution is improved efficiency, accuracy, and user experience in HR assessment processes.',
+    link: { href: '#', label: 'View Details' },
+    tags: ['Machine Learning', 'HR Tech', 'AI', 'OCR', 'Natural Language Processing'],
+    features: [
+      'Automated text extraction from resumes and cover letters',
+      'Personality trait analysis using advanced ML models',
+      'Real-time assessment scoring and reporting',
+      'Integration with existing HR management systems',
+      'User-friendly interface for both HR professionals and candidates'
+    ],
+    technologies: ['Florence-2', 'OCR', 'Deepseek API', 'React', 'Node.js', 'PostgreSQL'],
+    researchAndMarket: [
+      'Market analysis of existing HR assessment tools',
+      'Research on personality assessment methodologies',
+      'Survey of HR professionals' needs and pain points',
+      'Analysis of AI/ML applications in HR tech'
+    ],
+    technicalArchitecture: [
+      'Frontend: React with TypeScript',
+      'Backend: Node.js with Express',
+      'Database: PostgreSQL',
+      'AI/ML: Florence-2 and Deepseek API',
+      'OCR: Tesseract.js'
+    ],
+    keyFeatures: [
+      'Automated resume parsing and analysis',
+      'Personality trait assessment',
+      'Customizable evaluation criteria',
+      'Real-time reporting dashboard',
+      'API integration capabilities'
+    ],
+    implementationAndUX: [
+      'Modern, intuitive user interface',
+      'Mobile-responsive design',
+      'Accessibility compliance',
+      'Real-time feedback system',
+      'Data visualization components'
+    ],
+    futureEnhancements: [
+      'Multi-language support',
+      'Advanced analytics dashboard',
+      'Integration with video interview platforms',
+      'Machine learning model refinement',
+      'Custom assessment templates'
+    ]
+  },
+  {
+    id: 'movie-data-analytics',
+    name: 'Movie Data Analytics',
+    description: 'Cloud Analytics',
+    fullDescription: 'In this project, we chose to use Amazon Athena and QuickSight as the main technologies to perform large-scale movie data analysis from the IMDb dataset. Our goal was to explore patterns in movie ratings, genres, directors, and production timelines using a serverless and scalable solution. We selected Athena because it allowed us to query data directly from Amazon S3 without building a complicated ETL pipeline. This greatly simplified the data transformation process and significantly reduced setup time. With Athena's pay-per-query model, we were also able to control costs effectively. Additionally, QuickSight was chosen for data visualization due to its seamless integration with Athena, allowing us to create interactive dashboards in real-time.',
+    link: { href: '#', label: 'View Details' },
+    tags: ['AWS', 'Data Analytics', 'Cloud Computing', 'Visualization'],
+    features: [
+      'Serverless data querying with Amazon Athena',
+      'Interactive data visualization using QuickSight',
+      'Cost-effective pay-per-query model',
+      'Real-time data analysis capabilities'
+    ],
+    technologies: ['Amazon Athena', 'Amazon QuickSight', 'Amazon S3', 'SQL', 'IMDb Dataset'],
+    researchAndMarket: [
+      'Analysis of movie industry trends',
+      'Research on data visualization techniques',
+      'Evaluation of cloud analytics platforms',
+      'Cost analysis of different cloud solutions'
+    ],
+    technicalArchitecture: [
+      'Data Storage: Amazon S3',
+      'Query Engine: Amazon Athena',
+      'Visualization: Amazon QuickSight',
+      'Data Format: Parquet',
+      'Query Language: SQL'
+    ],
+    keyFeatures: [
+      'Automated data ingestion',
+      'SQL-based analysis',
+      'Interactive dashboards',
+      'Custom visualization templates',
+      'Scheduled report generation'
+    ],
+    implementationAndUX: [
+      'User-friendly query interface',
+      'Customizable dashboard layouts',
+      'Responsive design',
+      'Export capabilities',
+      'Collaboration features'
+    ],
+    futureEnhancements: [
+      'Machine learning integration',
+      'Real-time data streaming',
+      'Advanced predictive analytics',
+      'Natural language query processing',
+      'Enhanced visualization options'
+    ]
+  },
+  {
+    id: 'pifa-design',
+    name: 'Design of PIFA (Planar Inverted F-shaped Antenna)',
+    description: 'Designed and simulated a Bluetooth-band PIFA antenna using CST Microwave Studio, achieving optimized frequency response and impedance matching.',
+    fullDescription: 'As part of an antenna design project under the guidance of Professor Gao Ju, I researched and analyzed the structure and electromagnetic behavior of Planar Inverted F-shaped Antennas (PIFA), widely used in mobile communications. I designed and simulated a single-frequency PIFA model in CST Microwave Studio targeting the Bluetooth frequency band. The final design achieved a center frequency of 2.45 GHz, return loss below -10 dB within the Bluetooth band, and input impedance matched to 50Ω — ensuring efficient performance for wireless applications. The project involved parameter sweeps and analysis of structural effects on resonant frequency.',
+    link: { href: '#', label: 'View Details' },
+    tags: ['Antenna Design', 'RF Engineering', 'Electromagnetics', 'Electromagnetic', 'CST Simulation'],
+    features: [
+      'Researched and analyzed the characteristics and structure of PIFA, a mainstream mobile phone antenna',
+      'Adopted CST Microwave Studio to simulate a single-frequency PIFA antenna model, and analyzed the influence of the working frequency of related parameters',
+      'Designed a PIFA applicable within the Bluetooth frequency band, whose center frequency is 2.45Ghz, the return loss in the Bluetooth band is less than -10dB, and the input impedance of the antenna is 50Ω'
+    ],
+    technologies: ['CST Microwave Studio', 'RF and Microwave Engineering Principles', 'Signal Processing', 'Frequency Domain Analysis']
+  }
+]
+
+// Campus Experiences
+export const activitiesHeadLine = "Campus Experiences"
+export const activitiesIntro = "Student Union events I organized/participated in during university."
+
+export const activities: Array<ActivityItemType> = [
+  {
+    name: 'Night Running Activity',
+    description:
+      'Designed the running route to make it fun enough to attract participants. ' +
+      'Collected and recorded participants information. ' +
+      'Distributed relevant props to participants and maintained the order during the activity.',
+    date: '04/2019',
+    location: 'Beijing University of Technology',
+  },
+  {
+    name: 'Basketball/Badminton Matches',
+    description:
+      'Host/Referee/Scorekeeper of the University-level Athletics Activities. ' +
+      'Acted as host of Basketball Games, designing the talk and interaction sections and reacting to audience questions and requirements calmly and flexibly. ' +
+      'Played the roles of referee and scorekeeper for several times: made arrangements, maintained fairness and order in all matches, and completed all the tasks excellently.',
+    date: '10/2018 \u2013 05/2019',
+    location: 'Beijing University of Technology',
+  },
+  /*
+  {
+    name: 'Code Review Session',
+    description:
+      'Helping students improve their coding skills through peer code review and best practices sharing.',
+    date: '2024-03-15',
+    location: 'Shanghai',
+  },*/
+]

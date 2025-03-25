@@ -10,16 +10,16 @@ export type CareerItemType = {
   
 export const careerList: Array<CareerItemType> = [
     {
-      company: 'Shanghai Soong Ching Ling School',
+      company: 'Beijing Institute of Metrology',
       title: 'Computer Science Teacher',
-      logo: 'college',
-      start: '2020',
-      end: 'Present'
+      logo: 'coffee',
+      start: '2021.7',
+      end: '2023.9'
     },
-    {
+    /*{
       company: 'Bigo Live',
       title: 'US Operations',
-      logo: 'coffee',
+      logo: 'college',
       start: '2018',
       end: '2020'
     },
@@ -32,9 +32,9 @@ export const careerList: Array<CareerItemType> = [
     },
     {
       company: 'Expedia',
-      title: 'Software Engineer',
+      title: 'Software Engineer', 
       logo: 'coffee',
       start: '2015',
       end: '2017'
-    }
+    }*/
   ]
