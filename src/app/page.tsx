@@ -1,20 +1,16 @@
 import { Container } from '@/components/layout/Container'
-import Newsletter from '@/components/home/Newsletter'
 import Career from '@/components/home/Career'
 import Education from '@/components/home/Education'
 import SocialLinks from '@/components/home/SocialLinks'
 import { headline, introduction } from '@/config/infoConfig'
-// import { BlogCard } from '@/components/home/BlogCard'
-// import { getAllBlogs, type BlogType } from '@/lib/blogs'
 import { ProjectCard } from '@/components/project/ProjectCard'
 import { ActivityCard } from '@/components/home/ActivityCard'
-import { projectHeadLine, projectIntro, projects, /* blogHeadLine, blogIntro, */ techIcons } from '@/config/infoConfig'
-import { awards, awardsHeadLine, awardsIntro, activities, activitiesHeadLine, activitiesIntro } from '@/config/projects'
+import { projectHeadLine, projectIntro, projects, techIcons } from '@/config/infoConfig'
+import { activities, activitiesHeadLine, activitiesIntro } from '@/config/projects'
 import IconCloud from "@/components/ui/icon-cloud"
-import { Award, Briefcase, GraduationCap } from 'lucide-react'
+import { Briefcase, GraduationCap } from 'lucide-react'
 
 export default async function Home() {
-  // let blogList = (await getAllBlogs()).slice(0, 4)
 
   return (
     <>
@@ -53,23 +49,6 @@ export default async function Home() {
             ))}
           </ul>
         </div>
-
-        {/* Awards - Temporarily Hidden
-        <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
-          <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
-            <Award size={28}/>
-            {awardsHeadLine}
-          </h2>
-          <ul
-            role="list"
-            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
-          >
-            {awards.map((award) => (
-              <ActivityCard key={award.name} activity={award} titleAs='h3'/>
-            ))}
-          </ul>
-        </div>
-        */}
 
         {/* Campus Experiences */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
